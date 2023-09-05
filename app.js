@@ -46,6 +46,13 @@ io.on("connection", (socket) => {
  
 });
 
+app.get("/wake-up", (req, res) => {
+    res.json({
+      responseType: "success",
+      message: "Server is awake",
+    });
+  });
+
 server.listen(3009,()=>{
   console.log('server is up')
 })
